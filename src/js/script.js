@@ -72,14 +72,14 @@ async function handleSubmit(e) {
         const {hits} = res.data;
         console.log(hits);
         if (hits.length ===0) {
-            Notify.failure(`❌ Sorry, there are no images matching your search. Please try again.`);
+            Notify.failure(`Sorry, there are no images matching your search. Please try again.`);
         } else {
-        Notify.success(`✅ Hooray! We found ${totalHits} images.`);
+        Notify.success(`Hooray! We found ${totalHits} images.`);
         renderGallery(hits);
         }
         searchInputEl.value = '';
     } catch (err){
-        Notify.failure(`❌ ${err}`)
+        Notify.failure(`${err}`)
     }
 }
 
@@ -90,7 +90,7 @@ async function loadMore() {
         const hits = res.data.hits;
         renderGallery(hits);
     } catch (err) {
-        Notify.failure(`❌ ${err}`);
+        Notify.failure(`${err}`);
     }
 }
 
