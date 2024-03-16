@@ -1,11 +1,14 @@
-export const BASE_URL = "";
-const API_KEY = "";
+export const BASE_URL = "https://pixabay.com/api/";
+const API_KEY = "42872675-364989bcac8f0c57b2db4a522";
 
 export const options = {
-    param: {
+    params: {
         key: API_KEY,
-        q: "",
-        imiage_type: PushSubscriptionOptions,
-        
+        q: '',
+        image_type: 'photo',
+        orientation: 'horizontal',
+        safesearch: true,
+        page: 1,
+        per_page: 40,
     }
-}
+};
